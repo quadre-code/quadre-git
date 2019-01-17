@@ -68,7 +68,7 @@
     "grunt-lesslint": "latest",
     "grunt-lineending": "latest",
     "grunt-zip": "latest",
-    "rimraf": "2.5.4",
+    "rimraf": "^2.6.3",
     "tslint": "4.3.1",
     "typescript": "2.1.5",
     "typescript-eslint-parser": "1.0.2"
