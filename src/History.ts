@@ -1,5 +1,5 @@
 import { _, DocumentManager, FileUtils, Mustache } from "./brackets-modules";
-import * as md5 from "blueimp-md5";
+import md5 = require("blueimp-md5");
 import * as moment from "moment";
 import * as Strings from "strings";
 import * as ErrorHandler from "./ErrorHandler";
