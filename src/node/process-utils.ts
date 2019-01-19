@@ -85,7 +85,7 @@ export function executableExists(
         if (whichErr) {
             return callback(whichErr, false, null);
         }
-        const path = Path.normalize(_path);
+        const path = Path.normalize(_path!);
         fs.stat(path, (statErr, stats) => {
             if (statErr) {
                 return callback(statErr, false, null);
