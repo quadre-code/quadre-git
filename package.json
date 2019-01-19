@@ -59,8 +59,9 @@
     "@types/urijs": "^1.15.38",
     "@types/which": "^1.3.1",
     "concurrently": "^4.1.0",
-    "eslint": "3.13.1",
-    "eslint-config-pureprofile": "2.2.0",
+    "eslint": "^5.12.1",
+    "eslint-config-pureprofile": "^2.3.2",
+    "eslint-plugin-typescript": "^1.0.0-rc.3",
     "glob": "^7.1.3",
     "grunt": "latest",
     "grunt-lesslint": "latest",
@@ -69,8 +70,7 @@
     "lodash": "^4.17.11",
     "rimraf": "^2.6.3",
     "tslint": "4.3.1",
-    "typescript": "2.1.5",
-    "typescript-eslint-parser": "1.0.2"
+    "typescript": "~3.1.6"
   },
   "i18n": [
     "en",
