@@ -62,7 +62,7 @@
     "concurrently": "^4.1.0",
     "eslint": "3.13.1",
     "eslint-config-pureprofile": "2.2.0",
-    "glob": "7.1.1",
+    "glob": "^7.1.3",
     "grunt": "latest",
     "grunt-lesslint": "latest",
     "grunt-lineending": "latest",
