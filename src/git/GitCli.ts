@@ -881,14 +881,14 @@ export function getVersion() {
 
 function getCommitCountsFallback() {
     return git(["rev-list", "HEAD", "--not", "--remotes"])
-    .then((stdout) => {
-        const ahead = stdout ? stdout.split("\n").length : 0;
-        return "-1 " + ahead;
-    })
-    .catch((err) => {
-        ErrorHandler.logError(err);
-        return "-1 -1";
-    });
+        .then((stdout) => {
+            const ahead = stdout ? stdout.split("\n").length : 0;
+            return "-1 " + ahead;
+        })
+        .catch((err) => {
+            ErrorHandler.logError(err);
+            return "-1 -1";
+        });
 }
 
 export function getCommitCounts() {

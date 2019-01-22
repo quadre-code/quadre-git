@@ -21,9 +21,9 @@ const CMD_ADD_TO_IGNORE = "git.addToIgnore";
 const CMD_REMOVE_FROM_IGNORE = "git.removeFromIgnore";
 
 export const $icon = $("<a id='git-toolbar-icon' href='#'></a>")
-                                .attr("title", Strings.LOADING)
-                                .addClass("loading")
-                                .appendTo($("#main-toolbar .buttons"));
+    .attr("title", Strings.LOADING)
+    .addClass("loading")
+    .appendTo($("#main-toolbar .buttons"));
 
 EventEmitter.on(Events.GIT_DISABLED, () => $icon.removeClass("dirty"));
 EventEmitter.on(Events.GIT_STATUS_RESULTS, (results) => $icon.toggleClass("dirty", results.length !== 0));

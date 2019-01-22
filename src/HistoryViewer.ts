@@ -133,8 +133,8 @@ function attachAdvancedEvents() {
     $viewer.on("click", ".btn-checkout", () => {
         const cmd = "git checkout " + commit.hash;
         Utils.askQuestion(Strings.TITLE_CHECKOUT,
-                          Strings.DIALOG_CHECKOUT + "<br><br>" + cmd,
-                          { booleanResponse: true, noescape: true })
+            Strings.DIALOG_CHECKOUT + "<br><br>" + cmd,
+            { booleanResponse: true, noescape: true })
             .then((response) => {
                 if (response === true) {
                     return Git.checkout(commit.hash).then(refreshCallback);
@@ -146,8 +146,8 @@ function attachAdvancedEvents() {
     $viewer.on("click", ".btn-reset-hard", () => {
         const cmd = "git reset --hard " + commit.hash;
         Utils.askQuestion(Strings.TITLE_RESET,
-                          Strings.DIALOG_RESET_HARD + "<br><br>" + cmd,
-                          { booleanResponse: true, noescape: true })
+            Strings.DIALOG_RESET_HARD + "<br><br>" + cmd,
+            { booleanResponse: true, noescape: true })
             .then((response) => {
                 if (response === true) {
                     return Git.reset("--hard", commit.hash).then(refreshCallback);
@@ -159,8 +159,8 @@ function attachAdvancedEvents() {
     $viewer.on("click", ".btn-reset-mixed", () => {
         const cmd = "git reset --mixed " + commit.hash;
         Utils.askQuestion(Strings.TITLE_RESET,
-                          Strings.DIALOG_RESET_MIXED + "<br><br>" + cmd,
-                          { booleanResponse: true, noescape: true })
+            Strings.DIALOG_RESET_MIXED + "<br><br>" + cmd,
+            { booleanResponse: true, noescape: true })
             .then((response) => {
                 if (response === true) {
                     return Git.reset("--mixed", commit.hash).then(refreshCallback);
@@ -172,8 +172,8 @@ function attachAdvancedEvents() {
     $viewer.on("click", ".btn-reset-soft", () => {
         const cmd = "git reset --soft " + commit.hash;
         Utils.askQuestion(Strings.TITLE_RESET,
-                          Strings.DIALOG_RESET_SOFT + "<br><br>" + cmd,
-                          { booleanResponse: true, noescape: true })
+            Strings.DIALOG_RESET_SOFT + "<br><br>" + cmd,
+            { booleanResponse: true, noescape: true })
             .then((response) => {
                 if (response === true) {
                     return Git.reset("--soft", commit.hash).then(refreshCallback);

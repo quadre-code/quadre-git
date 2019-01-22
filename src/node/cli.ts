@@ -51,7 +51,7 @@ function execute(
 function join(arr: Buffer[]) {
     let index = 0;
     const length = arr.reduce((l, b) => l + b.length, 0);
-    const result = new Buffer(length);
+    const result = Buffer.alloc(length);
     arr.forEach((b) => {
         b.copy(result, index);
         index += b.length;
@@ -98,7 +98,7 @@ function spawn(
     child.addListener("close", () => {
         delete processMap[opts.cliId];
         callback(exitCode > 0 ? join(stderr) : null,
-                 exitCode > 0 ? null : join(stdout));
+            exitCode > 0 ? null : join(stdout));
     });
     child.stdin.end();
 }

@@ -253,8 +253,8 @@ function handleEvents() {
 
         const branchName = $(this).parent().data("branch");
         Utils.askQuestion(Strings.DELETE_LOCAL_BRANCH,
-                          StringUtils.format(Strings.DELETE_LOCAL_BRANCH_NAME, branchName),
-                          { booleanResponse: true })
+            StringUtils.format(Strings.DELETE_LOCAL_BRANCH_NAME, branchName),
+            { booleanResponse: true })
             .then((response) => {
                 if (response === true) {
                     return Git.branchDelete(branchName).catch((err) => {
@@ -404,7 +404,7 @@ export function refresh(): PromiseLike<void> {
     $gitBranchName
         .text("\u2026")
         .parent()
-            .show();
+        .show();
 
     return Git.getGitRoot().then((gitRoot) => {
         const projectRoot = Utils.getProjectRoot();

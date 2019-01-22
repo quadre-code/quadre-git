@@ -1,16 +1,17 @@
 module.exports = {
-  parser: "eslint-plugin-typescript/parser",
+  parser: "@typescript-eslint/parser",
   parserOptions: { sourceType: "module" },
   extends: "pureprofile",
   env: { es6: true, node: true },
-  plugins: ["typescript"],
+  plugins: ["@typescript-eslint"],
   rules: {
     "indent": "off",
-    "typescript/indent": ["error", 4, { "SwitchCase": 1 }],
+    "@typescript-eslint/indent": ["error", 4, { "SwitchCase": 1 }],
     "quotes": ["error", "double"],
     "no-const-assign": 0, // conflicts with ts
     "no-extra-parens": 0, // conflicts with ts
     "no-param-reassign": 0, // remove later
+    "no-multi-spaces": ["error", { ignoreEOLComments: true }],
     "no-undef": 0, // conflicts with ts
     "no-undefined": 0, // conflicts with ts
     "no-unused-expressions": 0, // conflicts with ts

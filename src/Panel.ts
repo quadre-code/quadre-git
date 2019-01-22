@@ -80,7 +80,7 @@ function _makeDialogBig($dialog) {
     $dialog
         .width(desiredWidth)
         .children(".modal-body")
-            .css("max-height", desiredHeight)
+        .css("max-height", desiredHeight)
         .end();
 
     return { width: desiredWidth, height: desiredHeight };
@@ -246,9 +246,9 @@ function _showCommitDialog(stagedDiff, _lintResults, prefilledMessage, commitMod
             if (commitMode === COMMIT_MODE.ALL || commitMode === COMMIT_MODE.CURRENT) {
                 const filePaths = _.map(files, (next) => next.file);
                 Git.stage(filePaths)
-                .then(() => _getStagedDiff())
-                .then((diff) => _doGitCommit($dialog, getCommitMessageElement, diff))
-                .catch((err) => ErrorHandler.showError(err, "Cant get diff for staged files"));
+                    .then(() => _getStagedDiff())
+                    .then((diff) => _doGitCommit($dialog, getCommitMessageElement, diff))
+                    .catch((err) => ErrorHandler.showError(err, "Cant get diff for staged files"));
             } else {
                 _doGitCommit($dialog, getCommitMessageElement, stagedDiff);
             }
@@ -464,22 +464,22 @@ function handleGitDelete(file) {
 
 function _getStagedDiff(commitMode?, files?) {
     return ProgressDialog.show(_getStagedDiffForCommitMode(commitMode, files),
-                               Strings.GETTING_STAGED_DIFF_PROGRESS,
-                               { preDelay: 3, postDelay: 1 })
-    .catch((err) => {
-        if (ErrorHandler.contains(err, "cleanup")) {
-            return false; // will display list of staged files instead
-        }
-        throw err;
-    })
-    .then((diff) => {
-        if (!diff) {
-            return Git.getListOfStagedFiles().then((filesList) => {
-                return Strings.DIFF_FAILED_SEE_FILES + "\n\n" + filesList;
-            });
-        }
-        return diff;
-    });
+        Strings.GETTING_STAGED_DIFF_PROGRESS,
+        { preDelay: 3, postDelay: 1 })
+        .catch((err) => {
+            if (ErrorHandler.contains(err, "cleanup")) {
+                return false; // will display list of staged files instead
+            }
+            throw err;
+        })
+        .then((diff) => {
+            if (!diff) {
+                return Git.getListOfStagedFiles().then((filesList) => {
+                    return Strings.DIFF_FAILED_SEE_FILES + "\n\n" + filesList;
+                });
+            }
+            return diff;
+        });
 }
 
 function _getStagedDiffForCommitMode(commitMode, files) {
@@ -628,18 +628,18 @@ function handleGitCommit(prefilledMessage, isMerge, commitMode) {
             }
 
             return handleGitCommitInternal(stripWhitespace,
-                                           files,
-                                           codeInspectionEnabled,
-                                           commitMode,
-                                           prefilledMessage);
+                files,
+                codeInspectionEnabled,
+                commitMode,
+                prefilledMessage);
         });
     } else if (commitMode === COMMIT_MODE.ALL) {
         p = Git.status().then((files) => {
             return handleGitCommitInternal(stripWhitespace,
-                                           files,
-                                           codeInspectionEnabled,
-                                           commitMode,
-                                           prefilledMessage);
+                files,
+                codeInspectionEnabled,
+                commitMode,
+                prefilledMessage);
         });
     } else if (commitMode === COMMIT_MODE.CURRENT) {
         p = Git.status().then((files) => {
@@ -673,8 +673,8 @@ function handleGitCommitInternal(stripWhitespace, files, codeInspectionEnabled, 
     if (stripWhitespace) {
         queue = queue.then(() => {
             return ProgressDialog.show(Utils.stripWhitespaceFromFiles(files, commitMode === COMMIT_MODE.DEFAULT),
-                                       Strings.CLEANING_WHITESPACE_PROGRESS,
-                                       { preDelay: 3, postDelay: 1 });
+                Strings.CLEANING_WHITESPACE_PROGRESS,
+                { preDelay: 3, postDelay: 1 });
         });
     }
 
@@ -850,7 +850,7 @@ function handleToggleUntracked() {
 
     $gitPanel
         .find(".git-toggle-untracked")
-            .text(showingUntracked ? Strings.HIDE_UNTRACKED : Strings.SHOW_UNTRACKED);
+        .text(showingUntracked ? Strings.HIDE_UNTRACKED : Strings.SHOW_UNTRACKED);
 
     refresh();
 }

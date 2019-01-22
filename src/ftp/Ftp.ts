@@ -75,26 +75,26 @@ function handleGitFtpScopeCreation() {
                         // Render the list element of the new remote
                         // FUTURE: replace this part with a way to call `Remotes.refreshRemotesPicker()`
                         const $newScope = $("<li/>")
-                                            .addClass("gitftp-remote")
-                                            .append("<a/>")
-                                            .find("a")
-                                                .attr({
-                                                    "href": "#",
-                                                    "data-remote-name": name,
-                                                    "data-type": "ftp"
-                                                })
-                                                .addClass("remote-name")
-                                                .append("<span/>")
-                                                .find("span")
-                                                    .addClass("trash-icon gitftp-remove-remote")
-                                                    .html("&times;")
-                                                .end()
-                                                .append("<span/>")
-                                                .find("span:nth-child(2)")
-                                                    .addClass("change-remote")
-                                                    .text(name)
-                                                .end()
-                                            .end();
+                            .addClass("gitftp-remote")
+                            .append("<a/>")
+                            .find("a")
+                            .attr({
+                                "href": "#",
+                                "data-remote-name": name,
+                                "data-type": "ftp"
+                            })
+                            .addClass("remote-name")
+                            .append("<span/>")
+                            .find("span")
+                            .addClass("trash-icon gitftp-remove-remote")
+                            .html("&times;")
+                            .end()
+                            .append("<span/>")
+                            .find("span:nth-child(2)")
+                            .addClass("change-remote")
+                            .text(name)
+                            .end()
+                            .end();
 
                         $gitPanel.find(".git-remotes-dropdown .ftp-remotes-header").after($newScope);
 

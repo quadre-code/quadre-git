@@ -288,14 +288,14 @@ function handleFetch(silent = false) {
 
         // If it's not a silent fetch show a progress window
         q = ProgressDialog.show(Git.fetchAllRemotes())
-        .catch((err) => ErrorHandler.showError(err))
-        .then(ProgressDialog.waitForClose);
+            .catch((err) => ErrorHandler.showError(err))
+            .then(ProgressDialog.waitForClose);
 
     } else {
 
         // Else fetch in the background
         q = Git.fetchAllRemotes()
-        .catch((err) => ErrorHandler.logError(err));
+            .catch((err) => ErrorHandler.logError(err));
 
     }
 

@@ -148,9 +148,9 @@ function loadMoreHistory() {
                     const commitsHtml = Mustache.render(gitPanelHistoryCommitsTemplate, templateData);
                     $historyList.children("tbody").append(commitsHtml);
                 })
-                .catch((err) => ErrorHandler.showError(err, "Failed to load more history rows"));
+                    .catch((err) => ErrorHandler.showError(err, "Failed to load more history rows"));
             })
-            .catch((err) => ErrorHandler.showError(err, "Failed to get current branch name"));
+                .catch((err) => ErrorHandler.showError(err, "Failed to get current branch name"));
         }
     }
     return null;
@@ -213,6 +213,7 @@ function addAdditionalCommitInfo(commits) {
                 commit.date.shown = date.format(ownFormat);
                 commit.date.title = date.format(format);
                 break;
+
             /* mode 4 (Original Git date) is handled above */
         }
         commit.hasTag = (commit.tags) ? true : false;

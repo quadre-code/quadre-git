@@ -114,8 +114,8 @@ function _refreshOpenFiles() {
         if (data) {
             const fullPath = data.fullPath;
             $li.toggleClass("git-ignored", isIgnored(fullPath))
-               .toggleClass("git-new", isNew(fullPath))
-               .toggleClass("git-modified", isModified(fullPath));
+                .toggleClass("git-new", isNew(fullPath))
+                .toggleClass("git-modified", isModified(fullPath));
         }
     });
 }

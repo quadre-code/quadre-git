@@ -50,9 +50,9 @@ function handleGitInit() {
 
         });
     })
-    .then(() => stageGitIgnore())
-    .catch((err) => ErrorHandler.showError(err, "Initializing new repository failed"))
-    .then(() => EventEmitter.emit(Events.REFRESH_ALL));
+        .then(() => stageGitIgnore())
+        .catch((err) => ErrorHandler.showError(err, "Initializing new repository failed"))
+        .then(() => EventEmitter.emit(Events.REFRESH_ALL));
 }
 
 // This checks if the project root is empty (to let Git clone repositories)
@@ -101,8 +101,8 @@ function handleGitClone() {
             ErrorHandler.showError(err, "Cloning remote repository failed!");
         }
     })
-    .catch((err) => ErrorHandler.showError(err))
-    .finally(() => $cloneButton.prop("disabled", false));
+        .catch((err) => ErrorHandler.showError(err))
+        .finally(() => $cloneButton.prop("disabled", false));
 }
 
 // Event subscriptions

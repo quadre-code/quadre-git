@@ -87,8 +87,8 @@ function showGutters(editor, _results) {
     cm.clearGutter(gutterName);
     cm.gitGutters.forEach((obj) => {
         const $marker = $("<div>")
-                        .addClass(gutterName + "-" + obj.type + " gitline-" + (obj.line + 1))
-                        .html("&nbsp;");
+            .addClass(gutterName + "-" + obj.type + " gitline-" + (obj.line + 1))
+            .html("&nbsp;");
         cm.setGutterMarker(obj.line, gutterName, $marker[0]);
     });
 
@@ -189,9 +189,9 @@ function processDiffResults(editor, diff) {
                 type: "removed",
                 line: lineRemovedFrom,
                 content: str.split("\n")
-                            .filter((l) => l.indexOf("-") === 0)
-                            .map((l) => l.substring(1))
-                            .join("\n")
+                    .filter((l) => l.indexOf("-") === 0)
+                    .map((l) => l.substring(1))
+                    .join("\n")
             });
         }
 
