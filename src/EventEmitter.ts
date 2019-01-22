@@ -6,7 +6,7 @@ import * as Utils from "./Utils";
 const debugOn = Preferences.get("debugMode");
 
 export interface MyEventEmitter2 extends EventEmitter2 {
-    _emit: Function;
+    _emit: (eventName: string, ...args: any[]) => void;
     emitFactory: (eventName: string, ...args: any[]) => () => void;
 }
 

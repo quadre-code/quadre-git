@@ -45,8 +45,8 @@ const generateCssAvatar = _.memoize((author, email) => {
 
     // Original source: http://indiegamr.com/generate-repeatable-random-numbers-in-js/
     const seededRandom = function (max = 1, min = 0, _seed) {
-        const seed = (_seed * 9301 + 49297) % 233280;
-        const rnd = seed / 233280.0;
+        const seedRandom = (_seed * 9301 + 49297) % 233280;
+        const rnd = seedRandom / 233280.0;
         return min + rnd * (max - min);
     };
 

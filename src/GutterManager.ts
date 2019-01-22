@@ -290,7 +290,7 @@ export function goToPrev() {
     if (!activeEditor) { return; }
 
     const results = activeEditor._codeMirror.gitGutters || [];
-    const searched = _.filter(results, (i) => !i.parentMark);
+    const searched = _.filter(results, (g) => !g.parentMark);
 
     const currentPos = activeEditor.getCursorPos();
     let i = searched.length;
@@ -310,12 +310,11 @@ export function goToNext() {
     if (!activeEditor) { return; }
 
     const results = activeEditor._codeMirror.gitGutters || [];
-    const searched = _.filter(results, (i) => !i.parentMark);
+    const searched = _.filter(results, (g) => !g.parentMark);
 
     const currentPos = activeEditor.getCursorPos();
     let i;
-    let l;
-    for (i = 0, l = searched.length; i < l; i++) {
+    for (i = 0; i < searched.length; i++) {
         if (searched[i].line > currentPos.line) {
             break;
         }

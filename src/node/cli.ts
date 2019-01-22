@@ -16,11 +16,19 @@ const fixCommandForExec = (command: string) => {
 
 /* eslint-disable */
 export interface DomainManager {
-    emitEvent: Function;
-    hasDomain: Function;
-    registerDomain: Function;
-    registerCommand: Function;
-    registerEvent: Function;
+    emitEvent: (domainName: string, eventName: string, parameters?: any[]) => void;
+    hasDomain: (domainName: string) => boolean;
+    registerDomain: (domainName: string, version: { major: number, minor: number } | null) => void;
+    registerCommand: (
+        domainName: string,
+        commandName: string,
+        commandFunction: (...args: any[]) => any,
+        isAsync: boolean,
+        description: string,
+        parameters: DomainCommandArgument[],
+        returns: DomainCommandArgument[]
+    ) => void;
+    registerEvent: (domainName: string, eventName: string, parameters: DomainCommandArgument[]) => void;
 }
 /* eslint-enable */
 
@@ -103,8 +111,15 @@ function spawn(
     child.stdin.end();
 }
 
-function doIfExists( // eslint-disable-line max-params
-    method: Function,
+// eslint-disable-next-line max-params
+function doIfExists(
+    method: (
+        directory: string,
+        command: string,
+        args: string[],
+        opts: { cliId: number, watchProgress: boolean },
+        callback: (stderr: string | null, stdout: string | null) => void
+    ) => any,
     directory: string,
     command: string,
     args: string[],
