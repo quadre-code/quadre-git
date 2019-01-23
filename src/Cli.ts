@@ -119,7 +119,7 @@ export interface CliOptions {
     cwd?: string;
     nonblocking?: boolean;
     timeout?: number | boolean;
-    timeoutCheck?: () => void;
+    timeoutCheck?: () => any;
     timeoutExpected?: boolean;
 }
 

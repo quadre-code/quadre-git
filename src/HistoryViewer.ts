@@ -8,8 +8,8 @@ import * as Preferences from "./Preferences";
 import * as Strings from "strings";
 import * as Utils from "./Utils";
 
-const historyViewerTemplate = require("text!templates/history-viewer.html");
-const historyViewerFilesTemplate = require("text!templates/history-viewer-files.html");
+import historyViewerTemplate = require("text!templates/history-viewer.html");
+import historyViewerFilesTemplate = require("text!templates/history-viewer-files.html");
 
 const avatarType = Preferences.get("avatarType");
 const enableAdvancedFeatures = Preferences.get("enableAdvancedFeatures");

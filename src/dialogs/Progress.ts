@@ -2,7 +2,7 @@ import * as Promise from "bluebird";
 import * as Strings from "strings";
 import { _, Dialogs, Mustache } from "../brackets-modules";
 
-const template = require("text!src/dialogs/templates/progress-dialog.html");
+import template = require("text!src/dialogs/templates/progress-dialog.html");
 let lines;
 let $textarea;
 

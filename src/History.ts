@@ -12,8 +12,8 @@ import * as Preferences from "./Preferences";
 
 const generateMd5 = _.memoize((str) => (md5 as any)(str));
 
-const gitPanelHistoryTemplate = require("text!templates/git-panel-history.html");
-const gitPanelHistoryCommitsTemplate = require("text!templates/git-panel-history-commits.html");
+import gitPanelHistoryTemplate = require("text!templates/git-panel-history.html");
+import gitPanelHistoryCommitsTemplate = require("text!templates/git-panel-history-commits.html");
 
 let $gitPanel = $(null);
 let $tableContainer = $(null);

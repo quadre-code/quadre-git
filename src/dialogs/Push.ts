@@ -3,9 +3,9 @@ import * as RemoteCommon from "./RemoteCommon";
 import * as Promise from "bluebird";
 import * as Strings from "strings";
 
-const template = require("text!src/dialogs/templates/push-dialog.html");
-const remotesTemplate = require("text!src/dialogs/templates/remotes-template.html");
-const credentialsTemplate = require("text!src/dialogs/templates/credentials-template.html");
+import template = require("text!src/dialogs/templates/push-dialog.html");
+import remotesTemplate = require("text!src/dialogs/templates/remotes-template.html");
+import credentialsTemplate = require("text!src/dialogs/templates/credentials-template.html");
 
 let defer;
 let pushConfig;

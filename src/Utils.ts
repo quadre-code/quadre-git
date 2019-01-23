@@ -10,9 +10,9 @@ import * as Preferences from "./Preferences";
 import * as Promise from "bluebird";
 import * as Strings from "strings";
 
-const formatDiffTemplate = require("text!templates/format-diff.html");
-const questionDialogTemplate = require("text!templates/git-question-dialog.html");
-const outputDialogTemplate = require("text!templates/git-output.html");
+import formatDiffTemplate = require("text!templates/format-diff.html");
+import questionDialogTemplate = require("text!templates/git-question-dialog.html");
+import outputDialogTemplate = require("text!templates/git-output.html");
 const writeTestResults = {};
 const debugOn = Preferences.get("debugMode");
 const EXT_NAME = "[brackets-git] ";

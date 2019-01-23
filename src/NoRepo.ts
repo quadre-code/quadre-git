@@ -11,7 +11,7 @@ import * as Git2 from "./git/Git";
 import * as Preferences from "./Preferences";
 import * as Utils from "./Utils";
 
-const gitignoreTemplate = require("text!templates/default-gitignore");
+import gitignoreTemplate = require("text!templates/default-gitignore");
 
 function createGitIgnore() {
     const gitIgnorePath = Preferences.get("currentGitRoot") + ".gitignore";

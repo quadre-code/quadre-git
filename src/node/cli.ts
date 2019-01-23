@@ -15,6 +15,12 @@ const fixCommandForExec = (command: string) => {
 };
 
 /* eslint-disable */
+export interface DomainCommandArgument {
+    name: string;
+    type: string;
+    description?: string;
+}
+
 export interface DomainManager {
     emitEvent: (domainName: string, eventName: string, parameters?: any[]) => void;
     hasDomain: (domainName: string) => boolean;
@@ -117,13 +123,13 @@ function doIfExists(
         directory: string,
         command: string,
         args: string[],
-        opts: { cliId: number, watchProgress: boolean },
+        opts: { cliId: number, watchProgress?: boolean },
         callback: (stderr: string | null, stdout: string | null) => void
     ) => any,
     directory: string,
     command: string,
     args: string[],
-    opts: {},
+    opts: { cliId: number, watchProgress?: boolean },
     callback: (stderr: string | null, stdout: string | null) => void
 ) {
     // do not call executableExists if we already know it exists
@@ -144,7 +150,7 @@ function executeIfExists(
     directory: string,
     command: string,
     args: string[],
-    opts: {},
+    opts: { cliId: number, watchProgress?: boolean },
     callback: (stderr: string | null, stdout: string | null) => void
 ) {
     return doIfExists(execute, directory, command, args, opts, callback);
@@ -154,7 +160,7 @@ function spawnIfExists(
     directory: string,
     command: string,
     args: string[],
-    opts: {},
+    opts: { cliId: number, watchProgress?: boolean },
     callback: (stderr: string | null, stdout: string | null) => void
 ) {
     return doIfExists(spawn, directory, command, args, opts, callback);

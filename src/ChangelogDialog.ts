@@ -4,7 +4,7 @@ import * as Preferences from "./Preferences";
 import * as Strings from "strings";
 import * as marked from "marked";
 
-const changelogDialogTemplate = require("text!templates/git-changelog-dialog.html");
+import changelogDialogTemplate = require("text!templates/git-changelog-dialog.html");
 
 let dialog;
 

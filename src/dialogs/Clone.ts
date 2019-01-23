@@ -3,8 +3,8 @@ import * as RemoteCommon from "./RemoteCommon";
 import * as Strings from "strings";
 import { Dialogs, Mustache } from "../brackets-modules";
 
-const template = require("text!src/dialogs/templates/clone-dialog.html");
-const credentialsTemplate = require("text!src/dialogs/templates/credentials-template.html");
+import template = require("text!src/dialogs/templates/clone-dialog.html");
+import credentialsTemplate = require("text!src/dialogs/templates/credentials-template.html");
 
 let defer;
 let $cloneInput;

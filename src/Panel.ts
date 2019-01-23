@@ -23,13 +23,13 @@ import * as ProgressDialog from "./dialogs/Progress";
 
 const PANEL_COMMAND_ID = "brackets-git.panel";
 
-const gitPanelTemplate = require("text!templates/git-panel.html");
-const gitPanelResultsTemplate = require("text!templates/git-panel-results.html");
-const gitAuthorsDialogTemplate = require("text!templates/authors-dialog.html");
-const gitCommitDialogTemplate = require("text!templates/git-commit-dialog.html");
-const gitTagDialogTemplate = require("text!templates/git-tag-dialog.html");
-const gitDiffDialogTemplate = require("text!templates/git-diff-dialog.html");
-const questionDialogTemplate = require("text!templates/git-question-dialog.html");
+import gitPanelTemplate = require("text!templates/git-panel.html");
+import gitPanelResultsTemplate = require("text!templates/git-panel-results.html");
+import gitAuthorsDialogTemplate = require("text!templates/authors-dialog.html");
+import gitCommitDialogTemplate = require("text!templates/git-commit-dialog.html");
+import gitTagDialogTemplate = require("text!templates/git-tag-dialog.html");
+import gitDiffDialogTemplate = require("text!templates/git-diff-dialog.html");
+import questionDialogTemplate = require("text!templates/git-question-dialog.html");
 
 const showFileWhiteList = /^\.gitignore$/;
 

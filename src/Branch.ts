@@ -24,9 +24,9 @@ import * as Strings from "strings";
 import * as Utils from "./Utils";
 import getMergeInfo from "./git/get-merge-info";
 
-const branchesMenuTemplate = require("text!templates/git-branches-menu.html");
-const newBranchTemplate = require("text!templates/branch-new-dialog.html");
-const mergeBranchTemplate = require("text!templates/branch-merge-dialog.html");
+import branchesMenuTemplate = require("text!templates/git-branches-menu.html");
+import newBranchTemplate = require("text!templates/branch-new-dialog.html");
+import mergeBranchTemplate = require("text!templates/branch-merge-dialog.html");
 
 let $gitBranchName = $(null);
 let currentEditor;

@@ -12,7 +12,7 @@ import * as PushDialog from "./dialogs/Push";
 import * as Strings from "strings";
 import * as Utils from "./Utils";
 
-const gitRemotesPickerTemplate = require("text!templates/git-remotes-picker.html");
+import gitRemotesPickerTemplate = require("text!templates/git-remotes-picker.html");
 
 let $selectedRemote = null;
 let $remotesDropdown = null;

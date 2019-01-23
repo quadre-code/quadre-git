@@ -4,9 +4,9 @@ import * as RemoteCommon from "./RemoteCommon";
 import * as Strings from "strings";
 import { Dialogs, Mustache } from "../brackets-modules";
 
-const template = require("text!src/dialogs/templates/pull-dialog.html");
-const remotesTemplate = require("text!src/dialogs/templates/remotes-template.html");
-const credentialsTemplate = require("text!src/dialogs/templates/credentials-template.html");
+import template = require("text!src/dialogs/templates/pull-dialog.html");
+import remotesTemplate = require("text!src/dialogs/templates/remotes-template.html");
+import credentialsTemplate = require("text!src/dialogs/templates/credentials-template.html");
 
 let defer;
 let pullConfig;

@@ -6,7 +6,7 @@ import * as Strings from "strings";
 import * as Utils from "../Utils";
 import * as GitFtp from "./GitFtp";
 
-const ftpScopesTemplate = require("text!templates/ftp/remotes-picker.html");
+import ftpScopesTemplate = require("text!templates/ftp/remotes-picker.html");
 let $gitPanel = null;
 let $remotesDropdown = null;
 

@@ -4,8 +4,8 @@ import * as ExtensionInfo from "./ExtensionInfo";
 import * as Strings from "strings";
 import * as Utils from "./Utils";
 
-const markdownReportTemplate = require("text!templates/error-report.md");
-const errorDialogTemplate = require("text!templates/git-error-dialog.html");
+import markdownReportTemplate = require("text!templates/error-report.md");
+import errorDialogTemplate = require("text!templates/git-error-dialog.html");
 const errorQueue = [];
 
 export interface ExtendedError extends Error {

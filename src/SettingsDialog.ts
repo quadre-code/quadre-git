@@ -4,8 +4,8 @@ import * as ChangelogDialog from "./ChangelogDialog";
 import * as Strings from "strings";
 import * as Git from "./git/GitCli";
 
-const settingsDialogTemplate = require("text!templates/git-settings-dialog.html");
-const questionDialogTemplate = require("text!templates/git-question-dialog.html");
+import settingsDialogTemplate = require("text!templates/git-settings-dialog.html");
+import questionDialogTemplate = require("text!templates/git-question-dialog.html");
 
 let dialog;
 let $dialog;
