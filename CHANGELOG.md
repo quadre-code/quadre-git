@@ -1,6 +1,6 @@
 # Changelog
 
-**If you get an error right after updating just close all Brackets instances and start again. We are aware of this problem.**
+**If you get an error right after updating just close all Quadre instances and start again. We are aware of this problem.**
 
 ## 0.16.6 (25/08/2016)
 * Fix an issue when viewing initial commit details by [Mateo Guzman](https://github.com/mateoguzman)

@@ -15,7 +15,7 @@ import questionDialogTemplate = require("text!templates/git-question-dialog.html
 import outputDialogTemplate = require("text!templates/git-output.html");
 const writeTestResults = {};
 const debugOn = Preferences.get("debugMode");
-const EXT_NAME = "[brackets-git] ";
+const EXT_NAME = "[quadre-git] ";
 
 export function getProjectRoot() {
     const projectRoot = ProjectManager.getProjectRoot();
@@ -24,7 +24,7 @@ export function getProjectRoot() {
 
 // returns "C:/Users/Zaggi/AppData/Roaming/Brackets/extensions/user/zaggino.brackets-git/"
 export function getExtensionDirectory() {
-    return window.bracketsGit.getExtensionPath();
+    return window.quadreGit.getExtensionPath();
 }
 
 export function formatDiff(diff) {
@@ -261,7 +261,7 @@ export function isProjectRootWritable() {
         }
 
         // create entry for temporary file
-        const fileEntry = FileSystem.getFileForPath(folder + ".bracketsGitTemp");
+        const fileEntry = FileSystem.getFileForPath(folder + ".quadreGitTemp");
 
         function finish(bool) {
             // delete the temp file and resolve

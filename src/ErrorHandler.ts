@@ -17,7 +17,7 @@ export interface ExtendedError extends Error {
 function getMdReport(params) {
     return Mustache.render(markdownReportTemplate, _.defaults(params || {}, {
         brackets: [brackets.metadata.name, brackets.metadata.version, "(" + brackets.platform + ")"].join(" "),
-        bracketsGit: "Brackets-Git " + ExtensionInfo.getSync().version,
+        quadreGit: "Quadre-Git " + ExtensionInfo.getSync().version,
         git: Strings.GIT_VERSION
     })).trim();
 }
@@ -90,7 +90,7 @@ export function logError(err: Error | string) {
     if (typeof err !== "string") {
         msg = err && err.stack ? err.stack : err;
     }
-    Utils.consoleLog("[brackets-git] " + msg, "error");
+    Utils.consoleLog("[quadre-git] " + msg, "error");
     errorQueue.push(err);
     return err;
 }

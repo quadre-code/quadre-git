@@ -21,7 +21,7 @@ module.exports = function (grunt) {
         },
         zip: {
             main: {
-                dest: "brackets-git.zip",
+                dest: "quadre-git.zip",
                 src: [
                     "nls/**",
                     "node_modules/**",

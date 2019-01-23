@@ -1,19 +1,19 @@
 {
-  "name": "brackets-git",
-  "title": "Brackets Git",
+  "name": "quadre-git",
+  "title": "Quadre Git",
   "version": "1.0.0",
   "engines": {
     "brackets": ">=1.8.0"
   },
-  "description": "Integration of Git into Brackets",
+  "description": "Integration of Git into Quadre",
   "keywords": [
-    "brackets-extension",
+    "quadre-extension",
     "git",
     "version-control",
     "source-control"
   ],
-  "homepage": "https://github.com/zaggino/brackets-git",
-  "bugs": "https://github.com/zaggino/brackets-git/issues",
+  "homepage": "https://github.com/quadre-code/quadre-git",
+  "bugs": "https://github.com/quadre-code/quadre-git/issues",
   "license": "MIT",
   "author": {
     "name": "Martin Zagora",
@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zaggino/brackets-git.git"
+    "url": "https://github.com/quadre-code/quadre-git.git"
   },
   "scripts": {
     "postinstall": "npm run webpack-all && grunt postinstall && npm run build",
@@ -85,7 +85,7 @@
   ],
   "package-i18n": {
     "de": {
-      "description": "Git-Integration für Brackets",
+      "description": "Git-Integration für Quadre",
       "keywords": [
         "git",
         "version-control",
@@ -95,7 +95,7 @@
       ]
     },
     "pl": {
-      "description": "Integracja Gita w Brackets",
+      "description": "Integracja Gita w Quadre",
       "keywords": [
         "git",
         "version-control",

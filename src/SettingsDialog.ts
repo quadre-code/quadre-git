@@ -133,7 +133,7 @@ export function show() {
         if (buttonId === "ok") {
             // Save everything to preferences
             collectValues();
-            // Restart brackets to reload changes.
+            // Restart Quadre to reload changes.
             showRestartDialog();
         }
     });

@@ -39,7 +39,7 @@ define(function (require, exports, module) {
     require("text!templates/git-question-dialog.html");
     require("text!templates/git-output.html");
 
-    // Brackets modules
+    // Quadre modules
     var _               = brackets.getModule("thirdparty/lodash"),
         AppInit         = brackets.getModule("utils/AppInit"),
         CommandManager  = brackets.getModule("command/CommandManager"),
@@ -56,12 +56,12 @@ define(function (require, exports, module) {
         Preferences     = require("dist/Preferences"),
         Strings         = require("strings");
 
-    window.bracketsGit = window.bracketsGit || {};
-    window.bracketsGit.getExtensionPath = function () {
+    window.quadreGit = window.quadreGit || {};
+    window.quadreGit.getExtensionPath = function () {
         return ExtensionUtils.getModulePath(module);
     }
-    window.bracketsGit.EventEmitter = EventEmitter;
-    window.bracketsGit.Events = Events;
+    window.quadreGit.EventEmitter = EventEmitter;
+    window.quadreGit.Events = Events;
 
     // Load extension modules that are not included by core
     var modules = [
@@ -78,12 +78,12 @@ define(function (require, exports, module) {
     require(modules);
 
     // Load CSS
-    ExtensionUtils.loadStyleSheet(module, "styles/brackets-git.less");
+    ExtensionUtils.loadStyleSheet(module, "styles/quadre-git.less");
     ExtensionUtils.loadStyleSheet(module, "styles/fonts/octicon.less");
     if (Preferences.get("useGitFtp")) { ExtensionUtils.loadStyleSheet(module, "styles/ftp/ftp.less"); }
 
     // Register command and add it to the menu.
-    var SETTINGS_COMMAND_ID = "brackets-git.settings";
+    var SETTINGS_COMMAND_ID = "quadre-git.settings";
     CommandManager.register(Strings.GIT_SETTINGS, SETTINGS_COMMAND_ID, SettingsDialog.show);
     Menus.getMenu(Menus.AppMenuBar.FILE_MENU).addMenuItem(SETTINGS_COMMAND_ID, "", Menus.AFTER, Commands.FILE_PROJECT_SETTINGS);
 

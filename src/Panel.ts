@@ -21,7 +21,7 @@ import * as Utils from "./Utils";
 import * as SettingsDialog from "./SettingsDialog";
 import * as ProgressDialog from "./dialogs/Progress";
 
-const PANEL_COMMAND_ID = "brackets-git.panel";
+const PANEL_COMMAND_ID = "quadre-git.panel";
 
 import gitPanelTemplate = require("text!templates/git-panel.html");
 import gitPanelResultsTemplate = require("text!templates/git-panel-results.html");
@@ -103,7 +103,7 @@ function _showCommitDialog(stagedDiff, _lintResults, prefilledMessage, commitMod
             });
         } else {
             ErrorHandler.logError(
-                "[brackets-git] lintResults contain object in unexpected format: " + JSON.stringify(lintResult)
+                "[quadre-git] lintResults contain object in unexpected format: " + JSON.stringify(lintResult)
             );
         }
         lintResult.hasErrors = lintResult.errors.length > 0;
@@ -1081,7 +1081,7 @@ export function init() {
     const $panelHtml = $(panelHtml);
     $panelHtml.find(".git-available, .git-not-available").hide();
 
-    gitPanel = WorkspaceManager.createBottomPanel("brackets-git.panel", $panelHtml, 100);
+    gitPanel = WorkspaceManager.createBottomPanel("quadre-git.panel", $panelHtml, 100);
     $gitPanel = gitPanel.$panel;
 
     $gitPanel
@@ -1158,14 +1158,14 @@ export function init() {
     attachDefaultTableHandlers();
 
     // Commit current and all shortcuts
-    const COMMIT_CURRENT_CMD = "brackets-git.commitCurrent";
-    const COMMIT_ALL_CMD = "brackets-git.commitAll";
-    const BASH_CMD = "brackets-git.launchBash";
-    const PUSH_CMD = "brackets-git.push";
-    const PULL_CMD = "brackets-git.pull";
-    const GOTO_PREV_CHANGE = "brackets-git.gotoPrevChange";
-    const GOTO_NEXT_CHANGE = "brackets-git.gotoNextChange";
-    const REFRESH_GIT = "brackets-git.refreshAll";
+    const COMMIT_CURRENT_CMD = "quadre-git.commitCurrent";
+    const COMMIT_ALL_CMD = "quadre-git.commitAll";
+    const BASH_CMD = "quadre-git.launchBash";
+    const PUSH_CMD = "quadre-git.push";
+    const PULL_CMD = "quadre-git.pull";
+    const GOTO_PREV_CHANGE = "quadre-git.gotoPrevChange";
+    const GOTO_NEXT_CHANGE = "quadre-git.gotoNextChange";
+    const REFRESH_GIT = "quadre-git.refreshAll";
 
     // Add command to menu.
     // Register command for opening bottom panel.

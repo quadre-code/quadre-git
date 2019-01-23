@@ -139,7 +139,7 @@ export function init() {
 
             _displayExtensionInfoIfNeeded().then(() => {
                 const expected = new ExpectedError(err);
-                expected.detailsUrl = "https://github.com/zaggino/brackets-git#dependencies";
+                expected.detailsUrl = "https://github.com/quadre-code/quadre-git#dependencies";
                 ErrorHandler.showError(expected, Strings.CHECK_GIT_SETTINGS);
             });
 

@@ -206,5 +206,5 @@ GitFtp.isAvailable().then(() => {
         addFtpScopesToPicker();
     });
 }).catch((err) => {
-    ErrorHandler.showError(err, "Git-FTP seems not installed in your system, please install it and restart Brackets.");
+    ErrorHandler.showError(err, "Git-FTP seems not installed in your system, please install it and restart Quadre.");
 });

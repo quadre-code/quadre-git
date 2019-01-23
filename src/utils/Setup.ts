@@ -43,7 +43,7 @@ export function findGit() {
 
                 if (major === 1 && minor < 8) {
                     return reject(
-                        "Brackets Git requires Git 1.8 or later - latest version found was " +
+                        "Quadre Git requires Git 1.8 or later - latest version found was " +
                         latestGit.version + searchedPaths
                     );
                 }

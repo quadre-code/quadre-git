@@ -321,7 +321,7 @@ export function mergeBranch(branchName, mergeMessage, useNoff) {
         flag: "="
         flagDescription: "Ref was up to date and did not need pushing"
         from: "refs/heads/rewrite-remotes"
-        remoteUrl: "http://github.com/zaggino/brackets-git.git"
+        remoteUrl: "http://github.com/quadre-code/quadre-git.git"
         status: "Done"
         summary: "[up to date]"
         to: "refs/heads/rewrite-remotes"
@@ -588,10 +588,10 @@ export function commit(message, amend) {
 
     return new Promise((resolve, reject) => {
         // FUTURE: maybe use git commit --file=-
-        const fileEntry = FileSystem.getFileForPath(Preferences.get("currentGitRoot") + ".bracketsGitTemp");
+        const fileEntry = FileSystem.getFileForPath(Preferences.get("currentGitRoot") + ".quadreGitTemp");
         Promise.cast(FileUtils.writeText(fileEntry, message))
             .then(() => {
-                args.push("-F", ".bracketsGitTemp");
+                args.push("-F", ".quadreGitTemp");
                 return git(args);
             })
             .then((res) => fileEntry.unlink(() => resolve(res)))

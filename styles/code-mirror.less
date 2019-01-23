@@ -1,17 +1,17 @@
-// main: brackets-git.less
+// main: quadre-git.less
 
 .CodeMirror {
     .CodeMirror-gutter-elt {
         // do not enable pointer events
         // pointer-events: all;
     }
-    .brackets-git-gutter {
+    .quadre-git-gutter {
         width: @gutterWidth;
         margin-left: 1px;
     }
-    .brackets-git-gutter-added,
-    .brackets-git-gutter-modified,
-    .brackets-git-gutter-removed {
+    .quadre-git-gutter-added,
+    .quadre-git-gutter-modified,
+    .quadre-git-gutter-removed {
         background-size: @gutterWidth @gutterWidth;
         background-repeat: no-repeat;
         font-size: 1em;
@@ -22,25 +22,25 @@
             color: @dark-bc-menu-bg;
         }
     }
-    .brackets-git-gutter-added {
+    .quadre-git-gutter-added {
         background-color: @green;
     }
-    .brackets-git-gutter-added.brackets-git-gutter-hover:before {
+    .quadre-git-gutter-added.quadre-git-gutter-hover:before {
         content: "+";
     }
-    .brackets-git-gutter-modified {
+    .quadre-git-gutter-modified {
         background-color: @orange;
     }
-    .brackets-git-gutter-modified.brackets-git-gutter-hover:before {
+    .quadre-git-gutter-modified.quadre-git-gutter-hover:before {
         content: "*";
     }
-    .brackets-git-gutter-removed {
+    .quadre-git-gutter-removed {
         background-color: @red;
     }
-    .brackets-git-gutter-removed.brackets-git-gutter-hover:before {
+    .quadre-git-gutter-removed.quadre-git-gutter-hover:before {
         content: "-";
     }
-    .brackets-git-gutter-deleted-lines {
+    .quadre-git-gutter-deleted-lines {
         color: @bc-text;
         background-color: lighten(@red, 25%);
         .selectable-text();
@@ -51,7 +51,7 @@
         }
 
         position: relative;
-        .brackets-git-gutter-copy-button {
+        .quadre-git-gutter-copy-button {
             position: absolute;
             left: 0;
             top: 0;
@@ -60,7 +60,7 @@
             line-height: 0.5em;
         }
     }
-    .CodeMirror-linenumber.brackets-git-gutter-hover {
+    .CodeMirror-linenumber.quadre-git-gutter-hover {
         background-color: @bc-panel-bg-alt;
         color: @bc-text-thin;
 

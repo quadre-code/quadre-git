@@ -1,7 +1,7 @@
 ## Opening issues
 
-Before opening a new issue, please be sure to check out list of already open issues [here](https://github.com/zaggino/brackets-git/issues?state=open) so we can prevent having duplicates.
-Always try to get as much relevant information from Brackets console (F12) as possible. To get more detailed output from console, turn on the DEBUG mode in Git settings dialog. (This mode will slow your extension down so don't forget to turn it off when you don't need it anymore)
+Before opening a new issue, please be sure to check out list of already open issues [here](https://github.com/quadre-code/quadre-git/issues?state=open) so we can prevent having duplicates.
+Always try to get as much relevant information from Quadre console (F12) as possible. To get more detailed output from console, turn on the DEBUG mode in Git settings dialog. (This mode will slow your extension down so don't forget to turn it off when you don't need it anymore)
 
 ## Pull requests
 

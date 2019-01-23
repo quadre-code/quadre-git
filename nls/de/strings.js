@@ -12,7 +12,7 @@ define({
     BASH_NOT_AVAILABLE:                 "Bash ist nicht verfügbar oder nicht richtig konfiguriert",
     BASIC_CONFIGURATION:                "Grundlegende Konfiguration",
     BLACK_WHITE_AVATAR:                 "Schwarz-weißer Avatar",
-    BRACKETS_GIT_ERROR:                 "Ein Fehler ist in Brackets Git aufgetreten\u2026",
+    BRACKETS_GIT_ERROR:                 "Ein Fehler ist in Quadre Git aufgetreten\u2026",
     BRANCH_NAME:                        "Branchname",
     BUTTON_CANCEL:                      "Abbrechen",
     BUTTON_CHANGELOG:                   "Changelog zeigen",

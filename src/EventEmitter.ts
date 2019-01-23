@@ -39,7 +39,7 @@ if (debugOn) {
         argsString = argsString + " (" + listenersCount + " listeners)";
 
         if (listenersCount > 0) {
-            Utils.consoleLog("[brackets-git] Event invoked: " + eventName + argsString);
+            Utils.consoleLog("[quadre-git] Event invoked: " + eventName + argsString);
         }
 
         return this._emit(eventName, ...args);

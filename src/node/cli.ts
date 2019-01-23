@@ -5,7 +5,7 @@ import * as fs from "fs";
 import * as ChildProcess from "child_process";
 import * as ProcessUtils from "./process-utils";
 
-const domainName = "brackets-git";
+const domainName = "quadre-git";
 const processMap: { [id: number]: ChildProcess.ChildProcess } = {};
 const resolvedPaths: { [path: string]: string } = {};
 const fixEOL = (str: string) => str[str.length - 1] === "\n" ? str.slice(0, -1) : str;
@@ -233,7 +233,7 @@ export function init(_domainManager: DomainManager) {
         });
     } else {
         throw new Error(domainName +
-                        " domain already registered. Close all Brackets instances and start again. " +
+                        " domain already registered. Close all Quadre instances and start again. " +
                         "This should only happen when updating the extension.");
     }
 

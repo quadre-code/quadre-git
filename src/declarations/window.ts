@@ -1,6 +1,6 @@
 interface Window {
 
-    bracketsGit: {
+    quadreGit: {
         getExtensionPath: () => string;
     };
 

@@ -1,14 +1,14 @@
-# Brackets-Git [![build status](https://travis-ci.org/zaggino/brackets-git.svg?branch=master)](https://travis-ci.org/zaggino/brackets-git)
+# Quadre-Git [![build status](https://travis-ci.org/quadre-code/quadre-git.svg?branch=master)](https://travis-ci.org/quadre-code/quadre-git)
 
-Brackets-Git is an extension for [Brackets](http://brackets.io/) editor - it provides Git integration for Brackets.
-It's tested and works on any platform supported by Brackets (Windows, Mac OS X, GNU/Linux).
+Quadre-Git is an extension for [Quadre](https://github.com/quadre-code/quadre) editor - it provides Git integration for Quadre.
+It's tested and works on any platform supported by Quadre (Windows, Mac OS X, GNU/Linux).
 
 ## Installation
 
 #### Dependencies:
-To make **Brackets-Git** work you'll need Git installed in your system:
+To make **Quadre-Git** work you'll need Git installed in your system:
 
-- **Windows**: [Git for Windows](http://msysgit.github.io/) is recommended with these [settings](https://raw.github.com/zaggino/brackets-git/master/screenshots/gitInstall.png).
+- **Windows**: [Git for Windows](http://msysgit.github.io/) is recommended with these [settings](https://raw.github.com/quadre-code/quadre-git/master/screenshots/gitInstall.png).
 - **Mac OS X**: [Git for Mac](http://git-scm.com/download/mac) is recommended.
 - **GNU/Linux**: Install the package `git`:
    - [Debian/Ubuntu](https://launchpad.net/~git-core/+archive/ppa) using [this guide](http://askmetutorials.blogspot.com.au/2014/03/install-git-191-on-ubuntu-linuxmint.html):
@@ -22,17 +22,17 @@ To make **Brackets-Git** work you'll need Git installed in your system:
    - RedHat/CentOS/Fedora: `sudo yum install git`
 
 #### Extension installation:
-To install latest release of **Brackets-Git** use the built-in Brackets Extension Manager which downloads the extension from the [extension registry](https://brackets-registry.aboutweb.com/).
+To install latest release of **Quadre-Git** use the built-in Quadre Extension Manager which downloads the extension from the [extension registry](https://brackets-registry.aboutweb.com/).
 
 #### Configuration:
 Extension can be configured by opening the Git Panel and clicking the ![settings...][settingsIcon] button.
-Alternatively you can use `File > Git Settings...` in the Brackets menu.
+Alternatively you can use `File > Git Settings...` in the Quadre menu.
 
 ## Features and limitations
 
 You can find some samples of features [here](docs/FEATURES.md).
 
-Currently **Brackets-Git** supports these features (this list may be incomplete as we add new features regularly):
+Currently **Quadre-Git** supports these features (this list may be incomplete as we add new features regularly):
 
 - `init` / `clone` / `push` / `pull`
 - `create` / `delete` / `merge` branches
@@ -42,14 +42,14 @@ Currently **Brackets-Git** supports these features (this list may be incomplete 
 - manage different Git settings
 - support for [Git-FTP](http://git-ftp.github.io/git-ftp/) ([installation instructions](docs/GIT-FTP.md))
 
-A comprehensive list of Brackets-Git features is available reading the [`CHANGELOG.md`](CHANGELOG.md).
+A comprehensive list of Quadre-Git features is available reading the [`CHANGELOG.md`](CHANGELOG.md).
 Most of the features available are configurable and it's possible to enable and disable them selectively.
-If you can't find the feature you were looking for, feel free to [open an issue](https://github.com/brackets-userland/brackets-git/issues) with your idea(s).
+If you can't find the feature you were looking for, feel free to [open an issue](https://github.com/quadre-code/quadre-git/issues) with your idea(s).
 
 **Pull/Push to password protected repositories:**
 Push/Pull from and to password protected repositories is partially supported, currently it works only with `http` / `https` repositories.
 
-The [Git Credential Manager for Windows (GCM)](https://github.com/Microsoft/Git-Credential-Manager-for-Windows) is recommended to manage password protected repositories, **Brackets-Git** will eventually provide better support for them.
+The [Git Credential Manager for Windows (GCM)](https://github.com/Microsoft/Git-Credential-Manager-for-Windows) is recommended to manage password protected repositories, **Quadre-Git** will eventually provide better support for them.
 You'll need to push manually the first time to setup your username/password into the credentials helper.
 
 **Working with SSH repositories:**
@@ -92,10 +92,10 @@ SSH protocol is currently a bit more difficult, so you'll have to use command li
 ## Some screenshots:
 
 ![main](screenshots/main.jpg)  
-*Main panel of Brackets Git*
+*Main panel of Quadre Git*
 
 ![history](screenshots/history.jpg)  
-*History panel of Brackets Git*
+*History panel of Quadre Git*
 
 ![history-details](screenshots/history-details.jpg)  
 *Details view for a specific commit*

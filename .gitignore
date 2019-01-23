@@ -2,7 +2,7 @@
 /node_modules/
 /src/node/node_modules/
 /.DS_Store
-/brackets-git.zip
+/quadre-git.zip
 /git.log
 /npm-debug.log
 /thirdparty/*.browser.js

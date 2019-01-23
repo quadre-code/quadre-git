@@ -6,7 +6,7 @@ import * as Git from "./git/GitCli";
 import * as Preferences from "./Preferences";
 
 let gitAvailable = false;
-const gutterName = "brackets-git-gutter";
+const gutterName = "quadre-git-gutter";
 const editorsWithGutters = [];
 let openWidgets = [];
 
@@ -121,7 +121,7 @@ function gutterClick(cm, lineIndex, gutterId) {
             element: $("<div class='" + gutterName + "-deleted-lines'></div>")
         };
         const $btn = $("<button/>")
-            .addClass("brackets-git-gutter-copy-button")
+            .addClass("quadre-git-gutter-copy-button")
             .text("R")
             .on("click", () => {
                 const doc = DocumentManager.getCurrentDocument();
@@ -338,18 +338,18 @@ $(document)
         $line.attr("title", "");
 
         // Remove any misc gutter hover classes
-        $(".CodeMirror-linenumber").removeClass("brackets-git-gutter-hover");
-        $(".brackets-git-gutter-hover").removeClass("brackets-git-gutter-hover");
+        $(".CodeMirror-linenumber").removeClass("quadre-git-gutter-hover");
+        $(".quadre-git-gutter-hover").removeClass("quadre-git-gutter-hover");
 
         // Add new gutter hover classes
-        $gitGutterLines = $(".gitline-" + $target.html()).addClass("brackets-git-gutter-hover");
+        $gitGutterLines = $(".gitline-" + $target.html()).addClass("quadre-git-gutter-hover");
 
         // Add tooltips if there are any git gutter marks
-        if ($gitGutterLines.hasClass("brackets-git-gutter-modified") ||
-            $gitGutterLines.hasClass("brackets-git-gutter-removed")) {
+        if ($gitGutterLines.hasClass("quadre-git-gutter-modified") ||
+            $gitGutterLines.hasClass("quadre-git-gutter-removed")) {
 
             $line = $target.attr("title", Strings.GUTTER_CLICK_DETAILS);
-            $target.addClass("brackets-git-gutter-hover");
+            $target.addClass("quadre-git-gutter-hover");
         }
     })
     .on("mouseleave", ".CodeMirror-linenumber", function (evt) {
@@ -360,8 +360,8 @@ $(document)
         }
 
         _timer = setTimeout(function () {
-            $(".gitline-" + $target.html()).removeClass("brackets-git-gutter-hover");
-            $target.removeClass("brackets-git-gutter-hover");
+            $(".gitline-" + $target.html()).removeClass("quadre-git-gutter-hover");
+            $target.removeClass("quadre-git-gutter-hover");
         }, 500);
     });
 */

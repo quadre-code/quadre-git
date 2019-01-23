@@ -8,13 +8,13 @@ import * as Utils from "./Utils";
 
 const debugOn = Preferences.get("debugMode");
 const gitTimeout = Preferences.get("gitTimeout") * 1000;
-const domainName = "brackets-git";
+const domainName = "quadre-git";
 const nodeConnection = new NodeConnection();
 let nextCliId = 0;
 const deferredMap = {};
 
 const MAX_COUNTER_VALUE = 4294967295; // 2^32 - 1
-const EVENT_NAMESPACE = ".bracketsGitEvent";
+const EVENT_NAMESPACE = ".quadreGitEvent";
 
 function getNextCliId() {
     if (nextCliId >= MAX_COUNTER_VALUE) {
@@ -285,7 +285,7 @@ export function cliHandler(method, cmd, args = [], opts: CliOptions = {}, retry 
 
     }).catch((err) => {
         throw ErrorHandler.showError(
-            err, "Unexpected error in CLI handler - close all instances of Brackets and start again to reload"
+            err, "Unexpected error in CLI handler - close all instances of Quadre and start again to reload"
         );
     });
 

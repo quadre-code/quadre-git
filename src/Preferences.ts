@@ -1,7 +1,7 @@
 import { _, PreferencesManager } from "./brackets-modules";
 
 const StateManager = PreferencesManager.stateManager;
-const prefix = "brackets-git";
+const prefix = "quadre-git";
 
 const defaultPreferences = {
     // features

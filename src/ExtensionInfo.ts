@@ -4,7 +4,7 @@ import * as Promise from "bluebird";
 let packageJson;
 
 function getPackageJsonPath() {
-    const extensionPath = window.bracketsGit.getExtensionPath();
+    const extensionPath = window.quadreGit.getExtensionPath();
     return extensionPath + "package.json";
 }
 
@@ -30,7 +30,7 @@ export function getSync() {
     if (packageJson) {
         return packageJson;
     }
-    throw new Error("[brackets-git] package.json is not loaded yet!");
+    throw new Error("[quadre-git] package.json is not loaded yet!");
 }
 
 // triggers the registry download if registry hasn't been downloaded yet
