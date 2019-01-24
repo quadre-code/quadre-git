@@ -2,6 +2,10 @@
 
 **If you get an error right after updating just close all Quadre instances and start again. We are aware of this problem.**
 
+## 1.0.0-alpha.1
+* Renamed to quadre-git
+* Refactor code to TypeScript
+
 ## 0.16.6 (25/08/2016)
 * Fix an issue when viewing initial commit details by [Mateo Guzman](https://github.com/mateoguzman)
 * Use cross-spawn to launch git commands.
