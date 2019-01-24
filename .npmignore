@@ -1,0 +1,5 @@
+/src/
+!/src/dialogs/templates
+/node_modules/
+/npm-debug.log
+/*.zip
