@@ -3,7 +3,7 @@
  * Events should be structured by file who emits them.
  */
 
-// Brackets events
+// Quadre events
 export const BRACKETS_CURRENT_DOCUMENT_CHANGE = "brackets.current.document.change";
 export const BRACKETS_PROJECT_CHANGE = "brackets.project.change";
 export const BRACKETS_PROJECT_REFRESH = "brackets.project.refresh";

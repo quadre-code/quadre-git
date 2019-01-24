@@ -1197,7 +1197,7 @@ export function init() {
     KeyBindingManager.addBinding(REFRESH_GIT, Preferences.get("refreshShortcut"), brackets.platform);
 
     // Init moment - use the correct language
-    moment.lang(brackets.getLocale());
+    moment.locale(brackets.getLocale());
 
     // Show gitPanel when appropriate
     if (Preferences.get("panelEnabled")) {

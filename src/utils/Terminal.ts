@@ -145,7 +145,7 @@ EventEmitter.on(Events.TERMINAL_OPEN, () => {
                 open();
             } else {
                 throw new ExpectedError(
-                    "Terminal configuration invalid, restoring defaults. Restart Brackets to apply."
+                    "Terminal configuration invalid, restoring defaults. Restart Quadre to apply."
                 );
             }
         })
