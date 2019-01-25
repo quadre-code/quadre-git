@@ -2,7 +2,10 @@
 
 **If you get an error right after updating just close all Quadre instances and start again. We are aware of this problem.**
 
-## 1.0.0-alpha.1
+## 1.0.0-alpha.2 (25/01/2019)
+* Changed build scripts
+
+## 1.0.0-alpha.1 (24/01/2019)
 * Renamed to quadre-git
 * Refactor code to TypeScript
 
