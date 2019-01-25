@@ -1,7 +1,7 @@
 {
   "name": "quadre-git",
   "title": "Quadre Git",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "engines": {
     "brackets": ">=1.8.0"
   },
