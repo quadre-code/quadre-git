@@ -25,8 +25,8 @@
     "url": "https://github.com/quadre-code/quadre-git.git"
   },
   "scripts": {
-    "postinstall": "npm run webpack-all && grunt postinstall && npm run build",
-    "build": "rimraf ./dist && npm run tsc-projects",
+    "prebuild": "rimraf ./dist",
+    "build": "npm run webpack-all && grunt postinstall && npm run tsc-projects",
     "tsc-projects": "concurrently \"tsc\" \"tsc -p src/node\"",
     "dev": "concurrently -k \"tsc --watch\" \"tsc -p src/node --watch\"",
     "test": "npm run build && npm run eslint && npm run tslint && npm run tslint-node",
@@ -39,7 +39,8 @@
     "webpack-eventemitter2": "webpack ./node_modules/eventemitter2/lib/eventemitter2.js ./thirdparty/eventemitter2.browser.js -p --output-library-target=amd",
     "webpack-marked": "webpack ./node_modules/marked/lib/marked.js ./thirdparty/marked.browser.js -p --output-library-target=amd",
     "webpack-moment": "webpack ./node_modules/moment/moment.js ./thirdparty/moment.browser.js -p --output-library-target=amd",
-    "webpack-urijs": "webpack ./node_modules/urijs/src/URI.js ./thirdparty/urijs.browser.js -p --output-library-target=amd"
+    "webpack-urijs": "webpack ./node_modules/urijs/src/URI.js ./thirdparty/urijs.browser.js -p --output-library-target=amd",
+    "prepublishOnly": "npm run test"
   },
   "dependencies": {
     "bluebird": "2.11.0",
