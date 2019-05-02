@@ -137,9 +137,11 @@ if (Preferences.get("markModifiedInTree")) {
         const fullPath = data.fullPath;
         if (isIgnored(fullPath)) {
             return "git-ignored";
-        } else if (isNew(fullPath)) {
+        }
+        if (isNew(fullPath)) {
             return "git-new";
-        } else if (isModified(fullPath)) {
+        }
+        if (isModified(fullPath)) {
             return "git-modified";
         }
         return null;

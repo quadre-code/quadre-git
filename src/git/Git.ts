@@ -28,25 +28,29 @@ function sortBranches(branches) {
         // origin remote first
         if (br && ar === "origin" && br !== "origin") {
             return -1;
-        } else if (ar && ar !== "origin" && br === "origin") {
+        }
+        if (ar && ar !== "origin" && br === "origin") {
             return 1;
         }
         // sort by remotes
         if (ar < br) {
             return -1;
-        } else if (ar > br) {
+        }
+        if (ar > br) {
             return 1;
         }
         // sort by sortPrefix (# character)
         if (a.sortPrefix < b.sortPrefix) {
             return -1;
-        } else if (a.sortPrefix > b.sortPrefix) {
+        }
+        if (a.sortPrefix > b.sortPrefix) {
             return 1;
         }
         // master branch first
         if (a.sortName === "master" && b.sortName !== "master") {
             return -1;
-        } else if (a.sortName !== "master" && b.sortName === "master") {
+        }
+        if (a.sortName !== "master" && b.sortName === "master") {
             return 1;
         }
         // sort by sortName (lowercased branch name)

@@ -542,6 +542,7 @@ if (Preferences.get("clearWhitespaceOnSave")) {
 
 export function defer() {
     return Promise.defer();
+
     /* TODO: this won't work
     const progressHandlers = [];
     const progress = (...args) => {

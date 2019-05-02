@@ -246,13 +246,17 @@ function pullFromRemote(remote) {
                     .then(() => {
                         if (pullConfig.strategy === "DEFAULT") {
                             return Git.mergeRemote(pullConfig.remote, pullConfig.branch);
-                        } else if (pullConfig.strategy === "AVOID_MERGING") {
+                        }
+                        if (pullConfig.strategy === "AVOID_MERGING") {
                             return Git.mergeRemote(pullConfig.remote, pullConfig.branch, true);
-                        } else if (pullConfig.strategy === "MERGE_NOCOMMIT") {
+                        }
+                        if (pullConfig.strategy === "MERGE_NOCOMMIT") {
                             return Git.mergeRemote(pullConfig.remote, pullConfig.branch, false, true);
-                        } else if (pullConfig.strategy === "REBASE") {
+                        }
+                        if (pullConfig.strategy === "REBASE") {
                             return Git.rebaseRemote(pullConfig.remote, pullConfig.branch);
-                        } else if (pullConfig.strategy === "RESET") {
+                        }
+                        if (pullConfig.strategy === "RESET") {
                             return Git.resetRemote(pullConfig.remote, pullConfig.branch);
                         }
                         throw new Error(`Unexpected pullConfig.strategy: ${pullConfig.strategy}`);
