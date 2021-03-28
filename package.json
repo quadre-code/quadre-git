@@ -34,12 +34,12 @@
     "tslint": "tslint -c tslint.json --project tsconfig.json",
     "tslint-node": "tslint -c tslint.json --project src/node/tsconfig.json",
     "webpack-all": "npm run webpack-bluebird && npm run webpack-blueimp-md5 && npm run webpack-eventemitter2 && npm run webpack-marked && npm run webpack-moment && npm run webpack-urijs",
-    "webpack-bluebird": "webpack ./node_modules/bluebird/js/main/bluebird.js ./thirdparty/bluebird.browser.js -p --output-library-target=amd",
-    "webpack-blueimp-md5": "webpack ./node_modules/blueimp-md5/js/md5.js ./thirdparty/blueimp-md5.browser.js -p --output-library-target=amd",
-    "webpack-eventemitter2": "webpack ./node_modules/eventemitter2/lib/eventemitter2.js ./thirdparty/eventemitter2.browser.js -p --output-library-target=amd",
-    "webpack-marked": "webpack ./node_modules/marked/lib/marked.js ./thirdparty/marked.browser.js -p --output-library-target=amd",
-    "webpack-moment": "webpack ./node_modules/moment/moment.js ./thirdparty/moment.browser.js -p --output-library-target=amd",
-    "webpack-urijs": "webpack ./node_modules/urijs/src/URI.js ./thirdparty/urijs.browser.js -p --output-library-target=amd",
+    "webpack-bluebird": "webpack ./node_modules/bluebird/js/main/bluebird.js -o ./thirdparty/bluebird.browser.js -p --output-library-target=amd",
+    "webpack-blueimp-md5": "webpack ./node_modules/blueimp-md5/js/md5.js -o ./thirdparty/blueimp-md5.browser.js -p --output-library-target=amd",
+    "webpack-eventemitter2": "webpack ./node_modules/eventemitter2/lib/eventemitter2.js -o ./thirdparty/eventemitter2.browser.js -p --output-library-target=amd",
+    "webpack-marked": "webpack ./node_modules/marked/lib/marked.js -o ./thirdparty/marked.browser.js -p --output-library-target=amd",
+    "webpack-moment": "webpack ./node_modules/moment/moment.js -o ./thirdparty/moment.browser.js -p --output-library-target=amd",
+    "webpack-urijs": "webpack ./node_modules/urijs/src/URI.js -o ./thirdparty/urijs.browser.js -p --output-library-target=amd",
     "prepublishOnly": "npm run test"
   },
   "dependencies": {
