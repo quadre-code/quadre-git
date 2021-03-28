@@ -1,4 +1,6 @@
-# Quadre-Git [![build status](https://travis-ci.org/quadre-code/quadre-git.svg?branch=master)](https://travis-ci.org/quadre-code/quadre-git)
+# Quadre-Git
+
+[![Build Status](https://github.com/quadre-code/quadre-git/actions/workflows/ci.yml/badge.svg)](https://github.com/quadre-code/quadre-git/actions)
 
 Quadre-Git is an extension for [Quadre](https://github.com/quadre-code/quadre) editor - it provides Git integration for Quadre.
 It's tested and works on any platform supported by Quadre (Windows, Mac OS X, GNU/Linux).
